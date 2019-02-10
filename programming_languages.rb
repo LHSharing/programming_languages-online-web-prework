@@ -64,11 +64,11 @@ def reformat_languages(languages)
 #binding.pry
         if new_hash[language] == nil
           new_hash[language]= { type=> info, :style => [style]}
-binding.pry
+#binding.pry
 
         else
           new_hash[language][:style] << style
-#binding.pry
+binding.pry
         end
       end
     end
