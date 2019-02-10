@@ -11,7 +11,6 @@ hash = {}
     #  hash[lang][:]
       #{type,style}[]
 
-#binding.pry
     end
    end
   end
@@ -62,13 +61,20 @@ def reformat_languages(languages)
   languages.each do |style, v|
     v.each do |language, data|
       data.each do |type, info|
+binding.pry
         if new_hash[language] == nil
           new_hash[language]= { type=> info, :style => [style]}
+#binding.pry
+
         else
           new_hash[language][:style] << style
+#binding.pry
         end
       end
     end
   end
     return new_hash
 end
+
+#put pry under and see how new_hash evolves
+#if it exists we update it , if not we create it --- line #66-#70 if else
