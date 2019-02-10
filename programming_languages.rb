@@ -61,7 +61,7 @@ def reformat_languages(languages)
   languages.each do |style, v|
     v.each do |language, data|
       data.each do |type, info|
-binding.pry
+#binding.pry
         if new_hash[language] == nil
           new_hash[language]= { type=> info, :style => [style]}
 binding.pry
